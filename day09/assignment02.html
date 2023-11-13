@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment02</title>
+</head>
+<body>
+<script>
+    // 2. 입력 연도가 윤년인지 아닌지 확인하는 프로그램을 작성하시오.
+    // 윤년은 4의 배수이어야 하고, 100의 배수는 아니어야 한다.
+    // 또한 400의 배수는 무조건 윤년이 된다.
+    // 입력은 prompt()함수를 이용하여 받는다.
+    let year = prompt()
+    let result = "";
+    switch (true){
+        case year % 400 == 0:
+            result = '윤년';
+        case year % 4 == 0 && !year % 100 == 0:
+            result = '윤년';
+            break;
+        default:
+            result = '윤년아님';
+    }
+    document.write(`입력하신 ${year}년의 윤년 여부는 : ${result} 입니다.<br>`)
+</script>
+</body>
+</html>

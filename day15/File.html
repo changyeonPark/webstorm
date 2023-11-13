@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="file" name="upload" multiple>
+        <button type="button">전송</button>
+    </form>
+    <div>
+        <button onclick="fn_addEvent()">동적으로 버튼 추가</button>
+    </div>
+    <div id="log"></div>
+    <script>
+        function fn_addEvent(){
+            document.querySelector("#log").innerHTML = "<button>알림</button>"
+        }
+        document.querySelector("#log").button.addEventListener("click" , () => {
+            alert("알림")
+        })
+
+        document.querySelector("button").addEventListener("click", () => {
+            const files = document.form1.upload.files;
+            Array.from(files).forEach( (file) => {
+            console.log("파일명: ", file.name)                // 파일 이름
+            console.log("파일크기: ", file.size)              // 파일 크기
+            console.log("파일타입: ", file.type)              // 파일 타입
+            console.log("파일 수정일: ", file.lastModified)   // 파일 마지막 수정일
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selfcheck_google</title>
+    <style>
+        fieldset {
+            border: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto Light", sans-serif;
+        }
+
+        #login {
+            width: 304px;
+            height: 390px;
+            padding: 28px 38px;
+            border: 1px solid black;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        #login button{
+            width: 228px;
+            height: 44px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #FFFFFF;
+        }
+
+        fieldset + p {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+
+        #login input {
+            width: 228px;
+            height: 44px;
+            background-color: #eaeaea;
+            border: 1px solid #eaeaea;
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        #login button[type='button'] {
+            background-color: #373F3C;
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        #login a {
+            text-decoration: none;
+            color: #2c3432;
+        }
+
+
+    </style>
+</head>
+<body>
+<form id="login">
+    <fieldset id="google">
+        <button>
+            <img src="google(logo).png" alt="구글 로고" width="14">
+            Log in with Google
+        </button>
+    </fieldset>
+
+    <p>or</p>
+
+    <fieldset>
+        <div>
+            <label for="userName"></label>
+            <input type="text" id="userName" placeholder="Username"><br>
+        </div>
+        <div>
+            <label for="password"></label>
+            <input type="text" id="password" placeholder="UserPassword"><br>
+        </div>
+        <div>
+            <button type="button">LOGIN</button>
+        </div>
+    </fieldset>
+    <a href="#">Forgot your password?</a>
+
+</form>
+</body>
+</html>

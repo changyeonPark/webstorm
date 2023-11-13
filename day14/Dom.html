@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+    <style>
+        .active {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+    <div name="log"></div>
+    <div class="progress"></div>
+    <ul>
+        <li>가</li>
+        <li>나</li>
+    </ul>
+
+    <button onclick="change()">변해라</button>
+    <button onclick="unChange()">돌아와라</button>
+
+    <script>
+        function unChange(){
+            document.querySelector("#title").classList.remove("active")
+        }
+        function change(){
+            // id 속성값이 title인 요소 노드 1개 선택하기
+            // document.getElementById("title").textContent = "내가 자바스크립트로 바꿨다"
+            //
+            // // class 속성값이 text인 요소 노드 모두 선택하기
+            // document.getElementsByClassName("text")[1].textContent = "text-10"
+            //
+            // // p 태그에 해당하는 요소 노드 모두 선택하기
+            // document.getElementsByTagName("p");
+            //
+            // document.querySelector("[name=log]").textContent = "querySelector로 바꿈"
+            // document.querySelectorAll(".text").forEach( (item, key) => {
+            //     item.textContent = `변경된 텍스트-${key}`
+            // })
+
+            // document.querySelector("ul").innerHTML += "<li>다</li>"
+            //
+            // document.querySelector("#title").style.color = "red"
+            // document.querySelectorAll(".text").forEach( (item, index) => {
+            //     item.style.textDecoration = "underLine"
+            // })
+
+            document.querySelector("#title").classList.add("active")
+
+        }
+    </script>
+</body>
+</html>

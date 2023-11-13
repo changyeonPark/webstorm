@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+    <img src="google(logo).png" alt="구글 이미지" id="googleImg">
+
+    <script>
+        document.querySelector("img").addEventListener("click", (ev) => {
+            ev.target.src = "naver(Logo).jpg"
+            ev.target.alt = "네이버 이미지"
+        })
+    </script>
+</body>
+</html>

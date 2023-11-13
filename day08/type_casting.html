@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type Casting</title>
+</head>
+<body>
+<script>
+    const result = 10 + "10";
+    console.log(result)
+
+    let num = 10;
+    let strNum = "10";
+    if (num === Number(strNum)) {    // String(num) === strNum
+        console.log('equals!');
+    }
+
+    let q1 = 10 + 10 * 2;
+    let q2 = 10 === 10 || 10 !== "10";
+    let q3 = !(10 < 20) && 10 < 20;
+
+    console.log(q1);
+    console.log(q2);
+    console.log(q3);
+</script>
+</body>
+</html>

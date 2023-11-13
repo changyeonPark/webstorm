@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This</title>
+</head>
+<body>
+    <p>text-1</p>
+    <p onclick="changeValue(this)">text-2</p>
+    <p>text-3</p>
+    <script>
+        const myName = () => {
+            this.target
+        }
+        function changeValue(el){
+            el.style.fontSize = "30px"
+        }
+        const pEls = document.querySelectorAll("p")
+        pEls.forEach( (el) => {
+            el.addEventListener("click", function () {
+                this.style.color = "white"
+            })
+        })
+        pEls.forEach( (element) => {
+            element.addEventListener("mouseup", function(){
+                this.style.backgroundColor = "pink"
+            })
+        })
+    </script>
+</body>
+</html>

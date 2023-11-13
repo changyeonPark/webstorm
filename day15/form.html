@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form태그</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="text" name="input1">
+    </form>
+
+    <form name="form2">
+        <input type="text" name="input2">
+    </form>
+
+    <form name="form3">
+        <input type="text" name="input3">
+    </form>
+
+    <script>
+        console.log(document.forms)
+        console.log(document.form1)
+        console.log(document.form2)
+        console.log(document.form3)
+        console.log("getElementsByName: ", document.getElementsByName("form1")[0])
+        document.getElementsByTagName("form")[0]
+        console.log("querySelector: ", document.querySelector('[name=form1]'))
+    </script>
+</body>
+</html>

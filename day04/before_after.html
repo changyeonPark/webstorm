@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>virtual element</title>
+    <style>
+        p::before{ content: "<div>추가된 내용</div>"; }
+        p::after{ content: "[after]" }
+    </style>
+</head>
+<body>
+<p>Lorem, Ipsum dolor.</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form element</title>
+</head>
+<body>
+    <form name="form1">
+        <label for="uname">이름</label>
+        <input type="text" id="uname" name="uname">
+
+        <label for="age">나이</label>
+        <input type="number" id="age" name="age">
+
+        <label>성별</label>
+        <select id="gender" name="gender">
+            <option>선택하세요</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+
+        <label><input type="checkbox" name="fruits" value="apple">사과</label>
+        <label><input type="checkbox" name="fruits" value="banana">바나나</label>
+        <label><input type="checkbox" name="fruits" value="orange">오렌지</label>
+        <label><input type="checkbox" name="fruits" value="melon">멜론</label>
+
+        <button type="button">전송</button>
+    </form>
+
+    <script>
+        // console.log(document.form1.elements)
+        // console.log(document.forms[0].age)
+
+        document.querySelector("button").addEventListener("click", () => {
+            // console.log(document.querySelector("#age").value)
+            // console.log(document.form1.uname.value)
+            // document.form1.age.value = 20
+            console.log(document.form1.gender.value)
+            // select의 option의 보여지는 값(text)을 변경
+            document.form1.gender.options[1].text = "남자"
+            document.form1.gender.options[2].text = "여자"
+
+
+            document.querySelectorAll("[type=checkbox]:checked").forEach( (chEl) => {
+                console.log(chEl.value)
+                chEl.checked = false
+            })
+            // document.querySelectorAll("[type=checkbox]").forEach( (chEl) => {
+            //     if (chEl.checked == true){
+            //         console.log(chEl.value)
+            //     }
+            // })
+        })
+    </script>
+</body>
+</html>
