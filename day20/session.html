@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session</title>
+</head>
+<body>
+    <input type="text" name="userName" id="userName">
+    <input type="password" name="password" id="password">
+
+    <script>
+        document.querySelector("#userName").value = localStorage.getItem("userId")
+        document.querySelector("#password").value = localStorage.getItem("password")
+
+
+    </script>
+</body>
+</html>

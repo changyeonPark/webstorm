@@ -1,0 +1,204 @@
+/* 네비게이터 */
+
+body {
+    background-color: black;
+}
+
+div {
+    /*border: 1px solid red;*/
+}
+
+.navigator {
+    /*border: 1px solid red;*/
+    height: 50px;
+    line-height: 50px;
+    position: sticky;
+    top: 0;
+}
+
+.navigator > div {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    margin: 0 100px 50px;
+    font-size: 20px;
+}
+
+.nav-head {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 22px;
+    width: 25%;
+}
+
+.nav-head-a {
+    color: orange; text-decoration: none; font-size: 25px;
+}
+
+.nav-body {
+    color: white;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-body-content{
+    text-align: center;
+    display: flex;
+    height: 100%;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+.nav-body-content > div {
+    margin: 0 30px;
+}
+
+.nav-footer {
+    width: 25%;
+    text-align: end;
+}
+
+#nav-btn{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#nav-btn{
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+}
+
+/* 컨테이너 */
+
+.container {
+
+}
+
+.con-head {
+    margin: 0 100px;
+}
+
+.con-head-content{
+    margin: 50px 10px;
+    height: 500px;
+    display: flex;
+}
+
+#tset {
+    vertical-align: middle;
+}
+
+.con-head-left {
+    height: 100%;
+    width: 50%;
+}
+
+.con-head-left > img {
+    height: 100%;
+    width: 100%;
+}
+
+.con-head-right {
+    text-align: center;
+    width: 50%;
+    margin: auto 10px;
+}
+
+#title {
+    color: orange;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.con-head-right > p {
+    color: white;
+    font-size: 25px;
+}
+
+.con-body {
+    background-color: white;
+    margin: 0 100px;
+}
+
+.con-body-head > h1 {
+    color: orange;
+    text-align: center;
+}
+
+.con-body-content {
+    box-sizing: content-box;
+    text-align: center;
+}
+
+.con-body-menu {
+    margin: 50px 50px;
+}
+
+.con-body-menu > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 50px 50px;
+    padding: 0;
+}
+
+.con-body-menu > ul > li {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    width: 32%;
+}
+
+.con-body-menu > ul > li > div >img {
+    margin-top: 20px;
+    width: 50%;
+    height: 200px;
+}
+
+.con-body-menu > ul > li > div > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer{
+    display: flex;
+    background-color: rgba(000,000,051, 5);
+}
+
+.footer-left{
+    margin-left: 100px;
+    width: 50%;
+}
+
+.footer-left > div {
+    width: 100%;
+}
+
+.footer-right{
+    margin-right: 100px;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-right > div {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.footer-right > div > p {
+    font-size: 23px;
+}
+
+#tel {
+    margin-top: 50px;
+    font-size: 14px;
+}

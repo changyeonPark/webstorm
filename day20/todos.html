@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>할 일</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="h2 text-center">TODO</h2>
+        <div class="form-floating input group">
+            <input type="text" id="inputTodo" class="form-control">
+            <label for="inputTodo" class="form-label">할 일</label>
+            <button type="button" id="addBtn" class="btn btn-primary">추가</button>
+        </div>
+        <ul class="list-group" id="todoList"></ul>
+    </div>
+
+
+    <script>
+        // localStorage.clear()
+
+        const inputTodo = document.querySelector("#inputTodo")
+        const addBtn = document.querySelector("#addBtn")
+        const todoList = document.querySelector("#todoList")
+
+        function addTodo(item) {
+
+            const newTodo = document.createElement("li")
+            // newTodo.setAttribute("class", "list-group-item")
+            newTodo.classList.add("list-group-item", "d-flex")
+
+            const content = document.createElement("span")
+            content.classList.add("me-auto", "align-self-center")
+            content.textContent = item
+
+            const completeBtn = document.createElement("button")
+            completeBtn.classList.add("btn", "btn-success")
+            completeBtn.textContent = "완료"
+
+            const deleteBtn = document.createElement("button")
+            deleteBtn.classList.add("btn", "btn-danger")
+            deleteBtn.textContent = "삭제"
+
+            newTodo.append(content, completeBtn, deleteBtn)
+
+            todoList.appendChild(newTodo)
+        }
+
+        const deleteBtn = document.querySelectorAll(".btn-danger")
+        deleteBtn.forEach( (el) => {
+            el.addEventListener("click", () => {
+                alert("정상")
+            })
+        })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let todos = JSON.parse(localStorage.getItem("todos")) || []
+            todos.forEach( (item) => {
+                addTodo(item.todo);
+            })
+        })
+
+        addBtn.addEventListener("click", () => {
+            if (inputTodo.value != ""){
+                addTodo(inputTodo.value)
+                saveToLocal(inputTodo.value)
+                inputTodo.value = ""
+            }
+        })
+
+        function saveToLocal(todo){
+            let todos = JSON.parse(localStorage.getItem("todos")) || []
+            todos.push({"todo": todo, "complete": false, "delete": false})
+            localStorage.setItem("todos", JSON.stringify(todos))
+
+            // if (localStorage.getItem("todos")) {
+            //     todos = JSON.parse(localStorage.getItem("todos"))
+            // } else {
+            //     todos = []
+            // }
+        }
+
+
+
+    </script>
+</body>
+</html>
